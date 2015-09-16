@@ -1,0 +1,13 @@
+<head>
+  <title>crosscopy</title>
+</head>
+
+<body>
+  <h1>Welcome to crossCopy!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+	<textarea id="textarea">{{#each paste}}{{text}}{{/each}}</textarea>
+</template>
