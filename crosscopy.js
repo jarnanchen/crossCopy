@@ -1,4 +1,7 @@
 if (Meteor.isClient) {
+  Template.hello.rendered = function() {
+    var clipboard = new Clipboard('.btn');
+  };
 
   Template.hello.helpers({
     paste: function() {
