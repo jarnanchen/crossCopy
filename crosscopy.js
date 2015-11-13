@@ -21,6 +21,9 @@ if (Meteor.isClient) {
           text: content
         }
       });
+    },
+    'click .btn-clear': function() {
+      document.querySelector('#textarea').value = null;
     }
   });
 }

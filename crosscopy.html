@@ -9,7 +9,9 @@
 </body>
 
 <template name="hello">
+  <p>
+  <button class="btn" data-clipboard-target="#textarea">Copy To Clipboard</button>
+  <button class="btn-clear">Clear Data</button>
+  </p>
 	<textarea id="textarea">{{#each paste}}{{text}}{{/each}}</textarea>
-<button class="btn" data-clipboard-target="#textarea">
-</button>
 </template>
