@@ -12,7 +12,14 @@ if (Meteor.isClient) {
   });
 
   Template.hello.events({
-    'change #textarea': function() {
+    'change #textarea': onChange,
+    'click .btn-clear': function() {
+      document.querySelector('#textarea').value = null;
+      onChange();
+    }
+  });
+
+  function onChange () {
       var content = document.getElementById('textarea').value;
       paste.upsert({
         _id: "textarea",
@@ -21,11 +28,7 @@ if (Meteor.isClient) {
           text: content
         }
       });
-    },
-    'click .btn-clear': function() {
-      document.querySelector('#textarea').value = null;
     }
-  });
 }
 
 paste = new Mongo.Collection("paste");
