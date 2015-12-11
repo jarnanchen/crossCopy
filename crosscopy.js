@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
   Template.hello.rendered = function() {
-    var clipboard = new Clipboard('.btn');
+    var clipboard = new Clipboard('#btn-copy');
   };
 
   Template.hello.helpers({
@@ -13,7 +13,7 @@ if (Meteor.isClient) {
 
   Template.hello.events({
     'change #textarea': onChange,
-    'click .btn-clear': function() {
+    'click #btn-clear': function() {
       document.querySelector('#textarea').value = null;
       onChange();
     }

@@ -1,17 +1,16 @@
 <head>
-  <title>crosscopy</title>
+    <title>crosscopy</title>
 </head>
 
 <body>
-  <h1>Welcome to crossCopy!</h1>
-
-  {{> hello}}
+    {{> hello}}
 </body>
-
 <template name="hello">
-  <p>
-  <button class="btn" data-clipboard-target="#textarea">Copy To Clipboard</button>
-  <button class="btn-clear">Clear Data</button>
-  </p>
-	<textarea id="textarea">{{#each paste}}{{text}}{{/each}}</textarea>
+    <p>
+        <button class="mui-btn mui-btn--primary" id="btn-copy" data-clipboard-target="#textarea">Copy</button>
+        <button class="mui-btn mui-btn--primary btn-clear" id="btn-clear">Clear</button>
+    </p>
+    <div class="mui-textfield">
+        <textarea placeholder="welcome to crosscopy, input your data here ^_^" id="textarea">{{#each paste}}{{text}}{{/each}}</textarea>
+    </div>
 </template>

@@ -1,5 +1,9 @@
 /* CSS declarations go here */
-textarea {
-	width: 800px;
-	height: 400px;
+#textarea {
+	width: 60%;
+	height: 600px;
+}
+
+body {
+	padding-left: 20px;
 }
