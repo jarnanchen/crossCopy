@@ -8,7 +8,6 @@ autopublish
 insecure
 zenorocha:clipboard
 propercursive:zeroclipboard
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -23,3 +22,5 @@ ejson
 spacebars
 check
 muicss:mui
+standard-minifier-css
+standard-minifier-js
